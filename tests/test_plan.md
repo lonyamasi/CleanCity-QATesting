@@ -5,9 +5,9 @@
 ---
 
 ##  1. Test Objectives
- Do thorough testing to the web app- Clean City and ensure:  
+ Do thorough testing on the web app- Clean City and ensure:  
 - The app is compliant with functional requirements (FR-001 to FR-097)  
-- The app is responsive, and compatible across different platforms  
+- The app is responsive and compatible across different platforms  
 - Ensure there is data security, business rule adherence, and proper error handling  
 - Identify, categorize, and document all functional and non-functional defects. 
 
@@ -19,7 +19,7 @@
  Testing will cover functional aspects like:
 - Authentication & Role-Based Access  
 - Waste Scheduling, Tracking, and Management  
-- User Dashboard, rewards,and rankings  
+- User Dashboard, rewards, and rankings  
 - Blog, Community Interactions, Content Moderation  
 - Help System and Activity Logging 
 
@@ -49,7 +49,7 @@ Testing will exclude:
 ## 4. Testing Schedule  
 
 | Phase                                | Dates                | Activities                                          |
-|--------------------------------------|--------------- ------|-----------------------------------------------------|
+|--------------------------------------|---------------------|-----------------------------------------------------|
 | Tests Planning                       | June 27– July 1      | Repo setup, test plan, preparing environments       |
 | Tests Design/case creations          | July 3–4             | Test cases, test data scenarios tested              |
 | Tests Execution                      | July 5–12            | Full test cycles, bugs logged                       |
@@ -152,20 +152,20 @@ Each test case will include:
 
 | Test Area                                   | Likelihood | Impact   | Priority     | Mitigation Strategy                                           |
 |---------------------------------------------|------------|----------|--------------|---------------------------------------------------------------|
-| **User Authentication** (Reg/Login/Reset)   | High       | High     | **Critical** |                                                               |
-| **Waste Management** (Schedule/Cancel)      | High       | High     | **Critical** |                                                               |
-| **Admin Functions** (Moderation/Management) | Medium     | High     | **High**     |                                                               |
-| **Content Features** (Blog/Comments)        | Medium     | Medium   | **Medium**   |                                                               |
+| **User Authentication** (Reg/Login/Reset)   | High       | High     | **Critical** | Test login, token handling, and invalid input.                |
+| **Waste Management** (Schedule/Cancel)      | High       | High     | **Critical** | Check full flow of operations, data accuracy, and simultaneous user actions.                   |
+| **Admin Functions** (Moderation/Management) | Medium     | High     | **High**     | Test role permissions and admin access.                       |
+| **Content Features** (Blog/Comments)        | Medium     | Medium   | **Medium**   | Validate user input and test for cross-site scripting.        |
 | **Data Persistence** (localStorage)         | High       | Medium   | **High**     | **State Transition Testing**                                  |
-| **Form Validation** (Inputs/Errors)         | High       | Medium   | **High**     |  **Boundary Value Analysis** and **Equivalence Partitioning** |
-| **Performance** (Speed/Responsiveness)      | Medium     | High     | **High**     |                                                               |
-| **Usability** (Navigation/UI Design)        | Medium     | Medium   | **Medium**   |  **Exploratory Testing**, **Checklist-Based Testing**         |
+| **Form Validation** (Inputs/Errors)         | High       | Medium   | **High**     | **Boundary Value Analysis** and **Equivalence Partitioning**  |
+| **Performance** (Speed/Responsiveness)      | Medium     | High     | **High**     | Test load time and response under stress.                     |
+| **Usability** (Navigation/UI Design)        | Medium     | Medium   | **Medium**   | **Exploratory Testing**, **Checklist-Based Testing**          |
 | **Accessibility** (WCAG/Screen Readers)     | Low        | High     | **High**     | using WCAG 2.1 guidelines and tools like Axe.                 |
 | **Security** (Sanitization/Sessions)        | High       | Critical | **Critical** | Perform **Static Analysis**  to detect XSS and session issues.|
 | **Compatibility** (Browser/Device)          | Medium     | Medium   | **Medium**   | Apply **Configuration Testing** across devices.               |
 | **Intentional Flaws** (Bug Injection)       | High       | Medium   | **High**     | Use **Exploratory Testing** to                                |
-| **Edge Cases** (Boundaries/Unexpected Input)| High       | Medium   | **High**     |                                                               |
-| **User Experience** (Workflow/UI Flow)      | Medium     | Medium   | **Medium**   |                                                               |
+| **Edge Cases** (Boundaries/Unexpected Input)| High       | Medium   | **High**     | Test with extreme or unexpected input values.                 |
+| **User Experience** (Workflow/UI Flow)      | Medium     | Medium   | **Medium**   | Check if users can complete tasks easily.                     |
 | **Data Integrity** (Consistency/Reliability)| Medium     | High     | **High**     | Apply **State Transition Testing**                            |
 
 
